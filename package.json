@@ -1,16 +1,28 @@
 {
-    "name": "yearn-starter-pack",
-    "devDependencies": {
-        "ethlint": "^1.2.5",
-        "node-env-run": "^4.0.2",
-        "prettier": "^2.1.2",
-        "prettier-plugin-solidity": "^1.0.0-alpha.57"
-    },
-    "scripts": {
-        "compile": "brownie compile",
-        "lint": "prettier --list-different **/*.sol **/*.json",
-        "lint:check": "prettier --check **/*.sol **/*.json",
-        "lint:fix": "prettier --write **/*.sol **/*.json",
-        "test": "nodenv -f --exec 'brownie test -s --coverage'"
-    }
+{
+  "name": "{{ packageName }}",
+  "version": "1.0.0",
+  "keywords": [
+    {{#each keywords}}
+    "{{ this }}",
+    {{/each}}
+    "ethereum",
+    "react",
+    "workspaces",
+    "yarn"
+  ],
+    "dependencies": {},
+  "devDependencies": {
+    "ethlint": "^1.2.5",
+    "node-env-run": "^4.0.2",
+    "prettier": "^2.1.2",
+    "prettier-plugin-solidity": "^1.0.0-alpha.57"
+  },
+  "scripts": {
+    "compile": "brownie compile",
+    "lint": "prettier --list-different **/*.sol **/*.json",
+    "lint:check": "prettier --check **/*.sol **/*.json",
+    "lint:fix": "prettier --write **/*.sol **/*.json",
+    "test": "nodenv -f --exec 'brownie test -s --coverage'"
+  }
 }
